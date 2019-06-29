@@ -2,12 +2,16 @@ package com.weixin.demo.pojo;
 
 import lombok.Data;
 
-@Data
-public class BaseMessage {
+import java.util.Date;
 
+@Data
+public class TextMessage {
+
+    private String content;
+    private Date createTime;
     private String toUserName;
     private String fromUserName;
     private Long msgId;
-    private Long createTime;
+    private String msgType;
 
 }

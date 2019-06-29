@@ -1,7 +1,7 @@
-
+#启动端口配置
 server:
   port: 80
-
+#数据库及服务名配置
 spring:
   application:
     name: dubbo-tutu-server
@@ -11,13 +11,56 @@ spring:
     username: root
     password: 123456
 
+#mybatis配置
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
-
+#分页配置
 pagehelper:
   helper-dialect: mysql
   reasonable: true
   support-methods-arguments: true
   params: count-countSql
+
+weixin4j:
+  token: XXSG3W4TWER
+  #是否 debug 模式
+  debug: true
+  #微信开发配置
+  config:
+    #开发者第三方用户唯一凭证
+    appid: appid
+    #开发者第三方用户唯一凭证密钥
+    secret: appsecret
+
+    #公众号原始ID
+    originalid: wx3546u7i6jy
+    #消息加密方式 0:明文模式(默认), 1:兼容模式, 2:安全模式(推荐)
+    encodingtype: 0
+    #消息加密密钥(43位字符组成A-Za-z0-9)
+    encodingaeskey: 0123456789abcedfghijklmnopqrstuvwxyzZXCVBNM
+    #网页安全授权URL
+    oauth-url: www.o9hn0.cn
+  #微信支付配置
+  pay-config:
+    #微信支付_商户ID，例如10000000001
+    partner-id:
+    #微信支付_商户密钥，由商户设置32位字符
+    partner-key:
+    #微信支付_通知URL，异步接收微信支付结果的URL
+    notify-url:
+    #证书路径(pk12格式)，例如：/opt/cert/10000000001.pk12
+    cert-path:
+    #证书密钥,默认为商户ID，例如：10000000001
+    cert-secret:
+
+#redis 配置
+redis:
+  ip: localhost
+  port: 6379
+  password:
+  random-db-num: 15
+  enable-random:
+    parts: true
+    testing: false

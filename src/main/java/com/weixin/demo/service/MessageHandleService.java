@@ -4,5 +4,5 @@ import java.util.Map;
 
 public interface MessageHandleService {
 
-    String handleMessage(Map<String, String> map);
+    String handleMessage(Map<String, String> map) throws Exception;
 }

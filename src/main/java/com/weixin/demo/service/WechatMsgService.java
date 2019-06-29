@@ -5,7 +5,8 @@ import com.weixin.demo.pojo.dto.WeChatResult;
 
 import java.util.Map;
 
-public interface CodeHandleService {
+public interface WechatMsgService {
 
-    WeChatResult handleCode(Map<String, String> params, BaseMessage msgInfo);
+    WeChatResult textMsgInfo(Map<String, String> params, BaseMessage msgInfo);
+
 }
