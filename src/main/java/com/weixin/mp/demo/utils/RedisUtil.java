@@ -1,5 +1,6 @@
-package com.weixin.demo.util;
+package com.weixin.mp.demo.utils;
 
+import com.weixin.demo.util.JedisConnectPool;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
 

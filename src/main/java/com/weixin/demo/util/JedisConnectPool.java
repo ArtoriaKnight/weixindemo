@@ -35,10 +35,10 @@ public abstract class JedisConnectPool {
             config.setTestOnBorrow(false);
             config.setTestWhileIdle(false);
             config.setTimeBetweenEvictionRunsMillis(-1);
-            jcpool = new JedisPool(config, env.getProperty("redis.ip"),
-                    Integer.parseInt(env.getProperty("redis.port")), 3000);
+            jcpool = new JedisPool(config, "127.0.0.1",
+                    6379, 3000);
 //            jcpool = new JedisPool(config, redisIP, redisPort, 3000);
-            RANDOM_DB_NUMBER = Integer.valueOf(env.getProperty("redis.random-db-num"));
+            RANDOM_DB_NUMBER = 15;
         }
     }
 

@@ -1,13 +1,13 @@
 #启动端口配置
 server:
-  port: 80
+  port: 9088
 #数据库及服务名配置
 spring:
   application:
     name: dubbo-tutu-server
   druid:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.88.128:3306/tutu_2?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://localhost:3306/tutu_2?characterEncoding=utf-8&useSSL=false
     username: root
     password: 123456
 
@@ -30,16 +30,16 @@ weixin4j:
   #微信开发配置
   config:
     #开发者第三方用户唯一凭证
-    appid: appid
+    appid: wx11007010f397b41b
     #开发者第三方用户唯一凭证密钥
-    secret: appsecret
+    secret: 3d75c5367406e6be8030d9cab310b911
 
     #公众号原始ID
-    originalid: wx3546u7i6jy
+    originalid: wx11007010f397b41b
     #消息加密方式 0:明文模式(默认), 1:兼容模式, 2:安全模式(推荐)
     encodingtype: 0
     #消息加密密钥(43位字符组成A-Za-z0-9)
-    encodingaeskey: 0123456789abcedfghijklmnopqrstuvwxyzZXCVBNM
+    encodingaeskey: uFgeSY9aippul81SHPNjfo5QWpD6wdwmPcJo9gSkHlc
     #网页安全授权URL
     oauth-url: www.o9hn0.cn
   #微信支付配置
@@ -54,6 +54,20 @@ weixin4j:
     cert-path:
     #证书密钥,默认为商户ID，例如：10000000001
     cert-secret:
+
+
+wx:
+  mp:
+    configs:
+        # 一个公众号的appid
+       appId: wx11007010f397b41b
+        # 公众号的appsecret
+       secret: 3d75c5367406e6be8030d9cab310b911
+       # 接口配置里的Token值
+       token: authtoken
+       #接口配置里的EncodingAESKey值
+       aesKey: uFgeSY9aippul81SHPNjfo5QWpD6wdwmPcJo9gSkHlc
+
 
 #redis 配置
 redis:
