@@ -36,6 +36,8 @@ weixin4j:
 
     #公众号原始ID
     originalid: wx11007010f397b41b
+    #公司
+#    originalid: gh_7b1ec42f038c
     #消息加密方式 0:明文模式(默认), 1:兼容模式, 2:安全模式(推荐)
     encodingtype: 0
     #消息加密密钥(43位字符组成A-Za-z0-9)
@@ -60,9 +62,15 @@ wx:
   mp:
     configs:
         # 一个公众号的appid
-       appId: wx11007010f397b41b
+#        个人
+#       appId: wx11007010f397b41b
+#        公司
+       appId: wx27eb4ff39f81ae9f
         # 公众号的appsecret
-       secret: 3d75c5367406e6be8030d9cab310b911
+        #个人
+#       secret: 3d75c5367406e6be8030d9cab310b911
+       #公司
+       secret: 849226415ee9666a08b2d65ba146a096
        # 接口配置里的Token值
        token: authtoken
        #接口配置里的EncodingAESKey值
